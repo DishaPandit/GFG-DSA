@@ -1,8 +1,14 @@
+
 //check if the no. n is power of 2 or not
 // i/p : 4
 // o/p : yes
 
 //TC - theta(no. of bits)
+
+//all these solution give runtime error for -2^31 -1. It gives integer overflow on leetcode
+//you can use method 4 to tackle it because you cant change input type on leetcode
+//or you can put a condition where you return false if no. is <=0
+
 
 #include<iostream>
 using namespace std;
@@ -71,4 +77,28 @@ int main()
     else 
         cout << "false";
 }
+*/
+
+//method 4
+/*
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        
+        int ans = 0;
+        for(int i =0; i<=30; i++)
+        {
+            ans = pow(2,i);
+            if(ans == n)
+                return true;
+        }
+        return false;
+    }
+};
+
 */
