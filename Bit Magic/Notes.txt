@@ -31,7 +31,7 @@ If you do negation on signed no. and it is positive, then the output will be
 a negative no. because the leading bit which was 0 earlier becomes 1 now
 
 Since, we are using leading bit to store sign, the range for signed no. is reduced
-It is -2^31 to 2^31-1  in a 32 bits representation.
+It is -2^31 to -2^31-1  in a 32 bits representation.
 
 2s complement of x in n bit represenation = 2^n - x
 
