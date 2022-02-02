@@ -38,7 +38,7 @@ SC - O(1)
 // in an array where all other elements appear
 // even number of times.
 
-do dry run on this array = {3,4,3,4,8,4,432,7,7}
+do dry run on this array = {3,4,3,4,8,4,4,3,7,7}
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -63,8 +63,10 @@ void printOdds(int arr[], int n)
 	//	 as the only set bit in set_bit
 	int x = 0, y = 0;
 	for (int i = 0; i < n; i++) {
+		//group 1 which has last bit as set bit
 		if (arr[i] & set_bit)
 			x = x ^ arr[i];
+		//group 2 which has last bit as zero
 		else
 			y = y ^ arr[i];
 	}
